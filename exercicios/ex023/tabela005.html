@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafios de Tabela (parte 2)</title>
+    <title>Agrupamento de colunas</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -13,79 +13,75 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
         th, td {
             border: 1px solid gray;
             padding: 10px;
         }
 
-        .h1 {
-            background-color: aquamarine;
+        .cnome {
+            background-color: greenyellow;
         }
-
     </style>
 </head>
 <body>
+    <h1>Exercício de Tabela</h1>
+
     <table>
-        <thead class="h1">
-           <tr>
-            <th rowspan="2" scope="col">Área</th>
-            <th rowspan="2" scope="col">Disciplinas</th>
-            <th colspan="2" scope="colgroup">Notas</th>
-            <th rowspan="2" scope="col">Média</th>
-            <tr>
-                <th scope="col">Nota 1</th>
-                <th scope="col">Nota 2</th>
-            </tr>
-           </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th rowspan="4" scope="rowgroup">Exatas</th>
-                <th scope="row">Matemática</th>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <th scope="row">Fisíca</th>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <th scope="row">Química</th>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <th scope="row">Biologia</th>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr class="h1">
-                <th colspan="4" scope="row">Média de Exatas</th>
-                <td>0</td>
-            </tr>
-            <tr>
-                <th rowspan="2" scope="rowgroup">Humanas</th>
-                <th scope="row">Historia</th>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <th scope="row">Geografia</th>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr class="h1">
-                <th colspan="4" scope="row" >Media de Humanas</th>
-                <td>0</td>
-            </tr>
-        </tbody>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <th scope="row">Ana Maria</th>
+            <th>F</th>
+            <th>25</th>
+            <th>Jornalista</th>
+        </tr>
+        <tr>
+            <th scope="row">Claudio</th>
+            <th>M</th>
+            <th>28</th>
+            <th>Programador</th>
+        </tr>
+        <tr>
+            <th scope="row">Gustavo</th>
+            <th>M</th>
+            <th>42</th>
+            <th>Professor</th>
+        </tr>
+        <tr>
+            <th scope="row">Hélio</th>
+            <th>M</th>
+            <th>19</th>
+            <th>Vendedor</th>
+        </tr>
+        <tr>
+            <th scope="row">Maria</th>
+            <th>F</th>
+            <th>39</th>
+            <th>Médica</th>
+        </tr>
+        <tr>
+            <th scope="row">Otávio</th>
+            <th>M</th>
+            <th>22</th>
+            <th>Nutricionista</th>
+        </tr>
     </table>
 </body>
 </html>
